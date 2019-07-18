@@ -55,6 +55,7 @@ class LDA(object):
 		self.log_gamma = (log_gamma_num.T - log_gamma_den).T
 
 	def qzd(self):
+		return np.exp(self.log_gamma)
 
 	def print_topics(self, n_words=5):
 		with open(self.words, 'r') as f:
